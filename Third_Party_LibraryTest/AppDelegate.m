@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MMKV.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    /// call this in main thread, before calling any other MMKV methods
+    /// parm rootDir the root dir of MMKV, passing nil defaults to {NSDocumentDirectory}/mmkv
+    /// return root dir of MMKV
+    //初始化 MMKV
+    NSString *rootDir = [MMKV initializeMMKV:nil];
+    NSLog(@"MMKV root dir is :%@",rootDir);
+    
+    
     return YES;
 }
 

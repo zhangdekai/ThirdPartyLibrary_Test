@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MMKVTestViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)jumpToMMKV:(UIButton *)sender {
+    
+    MMKVTestViewController *vc = [[MMKVTestViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+    
+    
 }
 
 

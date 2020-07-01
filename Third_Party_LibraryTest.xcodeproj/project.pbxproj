@@ -15,6 +15,10 @@
 		494745C524AC29A9009BE7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494745C424AC29A9009BE7CE /* Assets.xcassets */; };
 		494745C824AC29A9009BE7CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494745C624AC29A9009BE7CE /* LaunchScreen.storyboard */; };
 		494745CB24AC29A9009BE7CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494745CA24AC29A9009BE7CE /* main.m */; };
+		494745F124AC401A009BE7CE /* MMKVTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494745E724AC401A009BE7CE /* MMKVTestViewController.m */; };
+		494745F224AC401A009BE7CE /* AFNetworkingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494745E924AC401A009BE7CE /* AFNetworkingTestViewController.m */; };
+		494745F324AC401A009BE7CE /* SDWebImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494745ED24AC401A009BE7CE /* SDWebImageTestViewController.m */; };
+		494745F424AC401A009BE7CE /* TextUreTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494745EF24AC401A009BE7CE /* TextUreTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,15 @@
 		494745C724AC29A9009BE7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494745C924AC29A9009BE7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494745CA24AC29A9009BE7CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		494745E624AC401A009BE7CE /* MMKVTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMKVTestViewController.h; sourceTree = "<group>"; };
+		494745E724AC401A009BE7CE /* MMKVTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMKVTestViewController.m; sourceTree = "<group>"; };
+		494745E924AC401A009BE7CE /* AFNetworkingTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingTestViewController.m; sourceTree = "<group>"; };
+		494745EA24AC401A009BE7CE /* AFNetworkingTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingTestViewController.h; sourceTree = "<group>"; };
+		494745EC24AC401A009BE7CE /* SDWebImageTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageTestViewController.h; sourceTree = "<group>"; };
+		494745ED24AC401A009BE7CE /* SDWebImageTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTestViewController.m; sourceTree = "<group>"; };
+		494745EF24AC401A009BE7CE /* TextUreTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextUreTestViewController.m; sourceTree = "<group>"; };
+		494745F024AC401A009BE7CE /* TextUreTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextUreTestViewController.h; sourceTree = "<group>"; };
+		494745F524AC4176009BE7CE /* ThirdPartyLibrary.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartyLibrary.pch; sourceTree = "<group>"; };
 		704DF3E0849BF828513B92BC /* Pods-Third_Party_LibraryTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third_Party_LibraryTest.release.xcconfig"; path = "Target Support Files/Pods-Third_Party_LibraryTest/Pods-Third_Party_LibraryTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,12 +89,17 @@
 		494745B724AC29A4009BE7CE /* Third_Party_LibraryTest */ = {
 			isa = PBXGroup;
 			children = (
+				494745E824AC401A009BE7CE /* AFNetworking探索 */,
+				494745E524AC401A009BE7CE /* MMKV */,
+				494745EB24AC401A009BE7CE /* SDWebImage探索 */,
+				494745EE24AC401A009BE7CE /* TextureTest */,
 				494745B824AC29A4009BE7CE /* AppDelegate.h */,
 				494745B924AC29A4009BE7CE /* AppDelegate.m */,
 				494745BB24AC29A4009BE7CE /* SceneDelegate.h */,
 				494745BC24AC29A4009BE7CE /* SceneDelegate.m */,
 				494745BE24AC29A4009BE7CE /* ViewController.h */,
 				494745BF24AC29A4009BE7CE /* ViewController.m */,
+				494745F524AC4176009BE7CE /* ThirdPartyLibrary.pch */,
 				494745C124AC29A4009BE7CE /* Main.storyboard */,
 				494745C424AC29A9009BE7CE /* Assets.xcassets */,
 				494745C624AC29A9009BE7CE /* LaunchScreen.storyboard */,
@@ -91,13 +109,48 @@
 			path = Third_Party_LibraryTest;
 			sourceTree = "<group>";
 		};
+		494745E524AC401A009BE7CE /* MMKV */ = {
+			isa = PBXGroup;
+			children = (
+				494745E624AC401A009BE7CE /* MMKVTestViewController.h */,
+				494745E724AC401A009BE7CE /* MMKVTestViewController.m */,
+			);
+			path = MMKV;
+			sourceTree = "<group>";
+		};
+		494745E824AC401A009BE7CE /* AFNetworking探索 */ = {
+			isa = PBXGroup;
+			children = (
+				494745E924AC401A009BE7CE /* AFNetworkingTestViewController.m */,
+				494745EA24AC401A009BE7CE /* AFNetworkingTestViewController.h */,
+			);
+			path = "AFNetworking探索";
+			sourceTree = "<group>";
+		};
+		494745EB24AC401A009BE7CE /* SDWebImage探索 */ = {
+			isa = PBXGroup;
+			children = (
+				494745EC24AC401A009BE7CE /* SDWebImageTestViewController.h */,
+				494745ED24AC401A009BE7CE /* SDWebImageTestViewController.m */,
+			);
+			path = "SDWebImage探索";
+			sourceTree = "<group>";
+		};
+		494745EE24AC401A009BE7CE /* TextureTest */ = {
+			isa = PBXGroup;
+			children = (
+				494745EF24AC401A009BE7CE /* TextUreTestViewController.m */,
+				494745F024AC401A009BE7CE /* TextUreTestViewController.h */,
+			);
+			path = TextureTest;
+			sourceTree = "<group>";
+		};
 		E34157796B5A5A10A7EE4AB7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0EB338EB2781876F08A6F92A /* Pods-Third_Party_LibraryTest.debug.xcconfig */,
 				704DF3E0849BF828513B92BC /* Pods-Third_Party_LibraryTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -197,9 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494745F224AC401A009BE7CE /* AFNetworkingTestViewController.m in Sources */,
 				494745C024AC29A4009BE7CE /* ViewController.m in Sources */,
 				494745BA24AC29A4009BE7CE /* AppDelegate.m in Sources */,
+				494745F124AC401A009BE7CE /* MMKVTestViewController.m in Sources */,
 				494745CB24AC29A9009BE7CE /* main.m in Sources */,
+				494745F324AC401A009BE7CE /* SDWebImageTestViewController.m in Sources */,
+				494745F424AC401A009BE7CE /* TextUreTestViewController.m in Sources */,
 				494745BD24AC29A4009BE7CE /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +399,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = Third_Party_LibraryTest/ThirdPartyLibrary.pch;
 				INFOPLIST_FILE = Third_Party_LibraryTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,6 +418,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = Third_Party_LibraryTest/ThirdPartyLibrary.pch;
 				INFOPLIST_FILE = Third_Party_LibraryTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
