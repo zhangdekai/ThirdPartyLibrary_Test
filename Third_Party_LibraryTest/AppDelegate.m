@@ -19,16 +19,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+
     
-    /// call this in main thread, before calling any other MMKV methods
-    /// parm rootDir the root dir of MMKV, passing nil defaults to {NSDocumentDirectory}/mmkv
-    /// return root dir of MMKV
-    //初始化 MMKV
-    NSString *rootDir = [MMKV initializeMMKV:nil];
+    [self initMMKV];
+    
+    return YES;
+}
+
+- (void)initMMKV {
+    
+    /*
+    call this in main thread, before calling any other MMKV methods
+    parm rootDir the root dir of MMKV, passing nil defaults to {NSDocumentDirectory}/mmkv
+    return root dir of MMKV
+    */
+    //初始化  单进程的MMKV
+    NSString *rootDir = [MMKV initializeMMKV:nil logLevel:MMKVLogNone];//MMKVLogNone：无log的
     NSLog(@"MMKV root dir is :%@",rootDir);
     
     
-    return YES;
+    //If multi-process accessing is needed(between the App and extensions)，you need to set the group directory on MMKV initialization:
+    
+    /*
+     多进程的 MMKV
+    NSString *myGroupID = @"group.company.mmkv";
+    
+    // the group dir that can be accessed by App & extensions
+    NSString *groupDir = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:myGroupID].path;
+   
+    [MMKV initializeMMKV:nil groupDir:groupDir logLevel:MMKVLogInfo];
+    */
 }
 
 
